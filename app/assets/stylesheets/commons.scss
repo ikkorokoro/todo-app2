@@ -1,0 +1,25 @@
+@import 'variables';
+
+.title {
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  font-size: $title-base-size;
+  color: #000000;
+  margin-bottom: 50px;
+}
+
+.add-new-box {
+  background: #FFFFFF;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50px;
+  line-height: 200px;
+  height: 200px;
+}
+
+.avater {
+  width: 60px;
+}
