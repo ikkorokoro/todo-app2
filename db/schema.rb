@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2020_10_24_134859) do
 
   create_table "articles", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "title", null: false
-    t.text "content"
+    t.string "name", null: false
+    t.text "description", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_articles_on_user_id"

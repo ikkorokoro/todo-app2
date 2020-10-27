@@ -1,0 +1,15 @@
+.container
+  %ul
+    - @article.errors.full_messages.each do |msg|
+      %li= msg
+  .title New Board 
+  = form_with(model: @article, local: true) do |f| 
+    %div
+      = f.label :name, 'Name'
+    %div
+      = f.text_field :name, class: 'text'
+    %div
+      = f.label :description, 'Description'
+    %div
+    = f.text_area :description, class: 'text text-area'
+    = f.submit '保存', class: 'btn'

@@ -1,29 +1,25 @@
-$title-base-size: 35px;
-$form-base-size: 20px;
+@import 'variables';
 
-.title {
-  font-family: Avenir;
-  font-style: normal;
-  font-weight: 800;
-  font-size: $title-base-size;
-  color: #000000;
-  margin-bottom: 50px;
+
+
+label {
+  font-size: $form-base-size;
 }
 
-.field {
+.text {
+  display: block;
   width: 100%;
-  label {
-    font-size: $form-base-size;
+  background: #F4F4F4;
+  border: #F4F4F4;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 50px;
+  font-size: 15px;
+  
   }
-  .text {
-    display: block;
-    width: 100%;
-    background: #F4F4F4;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 40px;
-    font-size: 15px;
-    }
+
+.text-area {
+  height: 200px;
 }
 
   .btn {
@@ -39,10 +35,8 @@ $form-base-size: 20px;
   height: 60px;
   border: none;
   border-radius: 10px;
-
-  
 }
+
 .check-box{
-  width: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }

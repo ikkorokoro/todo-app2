@@ -8,8 +8,11 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-  %p.notice= notice
-  %p.alert= alert
-  %header.header
-    %h2 Boards
+    %header.header
+      %h2 Boards
+      = link_to 'ログアウト', destroy_user_session_path 
+      - if flash.present?
+        .flash
+          - flash.each do |key, value|
+            %div{:class => key}= value
   = yield

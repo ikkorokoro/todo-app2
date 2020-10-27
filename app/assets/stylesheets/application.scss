@@ -1,8 +1,9 @@
 @import 'header';
 @import 'form';
-
-$text-base-color: block;
-
+@import 'board';
+@import 'commons';
+@import 'variables';
+@import 'flash';
 
 * {
   -webkit-box-sizing: border-box;
@@ -30,6 +31,12 @@ ol, ul {
   list-style: none;
   list-style-type: none;
 }
+
+a {
+  text-decoration: none;
+  color: $link-base-color;
+}
+
 .container {
   margin: auto;
   width: 85%;

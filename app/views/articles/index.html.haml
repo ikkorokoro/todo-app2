@@ -1,0 +1,20 @@
+.container
+  %h2.title All Borads
+  - @articles.each do |article| 
+    .borad
+      .borad-box
+        %p.borad-left board
+        - if user_signed_in? && current_user.articles.exists?(id: article.id)
+          .drop-down
+            .drop-png
+              = image_tag 'Combined Shape.png'
+              .drop-content
+                = link_to  'Edit', edit_article_path(article)
+                = link_to 'Delete', article_path(article), data: { method: 'delete' }
+      %p.borad-content
+        = article.description
+      = image_tag 'Oval (1).png', class: 'avater'
+
+  = link_to new_article_path do
+    .add-new-box 
+      + Add new borad
