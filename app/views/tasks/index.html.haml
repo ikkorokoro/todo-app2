@@ -1,0 +1,15 @@
+.container
+  %h2.title Brackets
+  - @tasks.each do |task| 
+    = link_to task_path(task) do
+      .content
+        .content-box
+          %p.content-left 
+            = task.title
+        %p.content-writing
+          = task.description
+        = image_tag 'Oval (1).png', class: 'avater'
+
+  = link_to new_task_path do
+    .add-new-box 
+      + Add new card

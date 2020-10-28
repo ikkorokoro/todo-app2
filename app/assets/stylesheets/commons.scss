@@ -23,3 +23,36 @@
 .avater {
   width: 60px;
 }
+
+.drop-down {
+  position: relative;
+  top: 10px;
+  left: 0;
+  cursor: pointer;
+  
+  .drop-content {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    background: #FFFFFF;
+    border: 1px solid #F4F4F4;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    font-size: large;
+    text-align: center;
+    display: none;
+  }
+}
+
+.drop-content a {
+  display: block;
+  padding: 10px 8px;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.drop-down:hover .drop-content {
+  display: block;
+}
