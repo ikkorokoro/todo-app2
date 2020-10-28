@@ -1,9 +1,11 @@
 @import 'header';
 @import 'form';
-@import 'board';
+@import 'content';
 @import 'commons';
 @import 'variables';
 @import 'flash';
+@import 'task';
+@import 'comment';
 
 * {
   -webkit-box-sizing: border-box;
@@ -40,4 +42,5 @@ a {
 .container {
   margin: auto;
   width: 85%;
+  word-wrap: break-word;
 }

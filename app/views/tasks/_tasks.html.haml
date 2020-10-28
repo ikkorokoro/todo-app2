@@ -1,0 +1,15 @@
+.container
+  %ul
+    - @task.errors.full_messages.each do |msg|
+      %li= msg
+  .title New Card
+  = form_with(model: @task, local: true) do |f| 
+    %div
+      = f.label :title, 'Title'
+    %div
+      = f.text_field :title, class: 'text'
+    %div
+      = f.label :description, 'Description'
+    %div
+    = f.text_area :description, class: 'text text-area'
+    = f.submit '保存', class: 'btn'

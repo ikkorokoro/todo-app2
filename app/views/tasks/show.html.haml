@@ -1,0 +1,31 @@
+.container
+  .task-box
+    .task-top
+      .title 
+        = @task.title
+      - if user_signed_in? && current_user.tasks.exists?(id: @task.id)
+        .drop-down
+          .drop-png
+            = image_tag 'Combined Shape.png'
+            .drop-content
+              = link_to  'Edit', edit_task_path(@task)
+              = link_to 'Delete', task_path(@task), data: { method: 'delete' }
+    = image_tag 'main-vsual.png', class: 'eyecatch'
+    .content
+      .content-box
+        %p.content-left board
+      %p.content-writing
+        = @task.description
+
+  .comment
+    %h2.comment-title
+      Comment
+    .comment-box
+      .comment-box-img
+        = image_tag 'Oval (1).png', class: 'avater'
+      .comment-box-content
+        = @task.description
+
+  = link_to new_task_path do
+    .add-new-box 
+      + Add new comment
