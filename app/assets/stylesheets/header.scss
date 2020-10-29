@@ -2,6 +2,10 @@
   padding: 30px 40px;
   border-bottom: 1px solid black;
   margin-bottom: 40px;
+  &-top {
+    display: flex;
+    justify-content: space-between;
+  }
   h2 {
     font-family: Avenir;
     font-style: normal;

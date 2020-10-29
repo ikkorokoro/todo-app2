@@ -10,7 +10,8 @@ def new
 end
 
 def show
-  @task = current_user.tasks.find(params[:id])
+  @task = Task.find(params[:id])
+  @comments = @task.comments
 end
 
 def edit
@@ -39,6 +40,6 @@ end
 
 private
 def params_task
-  params.require(:task).permit(:title, :description)
+  params.require(:task).permit(:eyecatch, :title, :description)
 end
 end

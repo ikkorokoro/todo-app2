@@ -5,6 +5,10 @@
   .title New Card
   = form_with(model: @task, local: true) do |f| 
     %div
+      = f.label :eyecatch, 'eyecatch'
+    %div
+      = f.file_field :eyecatch, class: 'file'
+    %div
       = f.label :title, 'Title'
     %div
       = f.text_field :title, class: 'text'

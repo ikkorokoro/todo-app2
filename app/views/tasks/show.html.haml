@@ -10,7 +10,8 @@
             .drop-content
               = link_to  'Edit', edit_task_path(@task)
               = link_to 'Delete', task_path(@task), data: { method: 'delete' }
-    = image_tag 'main-vsual.png', class: 'eyecatch'
+    - if @task.eyecatch.attached?
+      = image_tag @task.eyecatch, class: 'eyecatch'
     .content
       .content-box
         %p.content-left board
@@ -20,11 +21,12 @@
   .comment
     %h2.comment-title
       Comment
-    .comment-box
-      .comment-box-img
-        = image_tag 'Oval (1).png', class: 'avater'
-      .comment-box-content
-        = @task.description
+    - @comments.each do |comment|
+      .comment-box
+        .comment-box-img
+          = image_tag 'Oval (1).png', class: 'avater'
+        .comment-box-content
+          = comment.description
 
   = link_to new_task_path do
     .add-new-box 
