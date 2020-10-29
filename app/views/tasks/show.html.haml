@@ -28,6 +28,6 @@
         .comment-box-content
           = comment.description
 
-  = link_to new_task_path do
+  = link_to new_task_comment_path(@task) do
     .add-new-box 
       + Add new comment
