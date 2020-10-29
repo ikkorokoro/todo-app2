@@ -13,8 +13,10 @@
                 = link_to 'Delete', article_path(article), data: { method: 'delete' }
       %p.content-writing
         = article.description
-      = image_tag 'Oval (1).png', class: 'avater'
-
+      - if article.avater.attached?
+        = image_tag article.avater, class: 'avater'
+      - else
+        = image_tag 'Oval (1).png', class: 'avater'
   = link_to new_article_path do
     .add-new-box 
       + Add new borad

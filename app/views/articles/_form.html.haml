@@ -5,6 +5,10 @@
   .title New Board 
   = form_with(model: @article, local: true) do |f| 
     %div
+      = f.label :avater, 'avater'
+    %div
+      = f.file_field :avater, class: 'file'
+    %div
       = f.label :name, 'Name'
     %div
       = f.text_field :name, class: 'text'

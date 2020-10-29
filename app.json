@@ -1,0 +1,16 @@
+{
+  "name": "todo-app2",
+  "description": "This is todo-app2",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/ikkorokoro/todo-app2",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
